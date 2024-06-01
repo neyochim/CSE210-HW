@@ -6,7 +6,19 @@ class Program
 {
     static void Main(string[] args)
     {
-        var _scripture = new Scripture(new Reference("John", 3, 16), "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.");
+        Console.WriteLine("Enter the book of the scripture:");
+        var book = Console.ReadLine();
+
+        Console.WriteLine("Enter the chapter of the scripture:");
+        var chapter = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter the verse of the scripture:");
+        var verse = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter the text of the scripture:");
+        var text = Console.ReadLine();
+
+        var _scripture = new Scripture(new Reference(book, chapter, verse), text);
         while (true)
         {
             Console.Clear();
